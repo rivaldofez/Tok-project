@@ -11,15 +11,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Se-Trip"
+        android:text="@string/splashscreen_title"
         android:layout_centerInParent="true"
         android:textSize="35sp"
         android:textStyle="bold" />
 
-    <TextView
+    <ProgressBar
+        android:id="@+id/splashscreen_progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Secure yourself during Trip"
+        android:layout_above="@+id/splashscreen_about"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/splashscreen_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splashscreen_about"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"

@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SeTrip</string>
+    <string name="splashscreen_title">Se-Trip</string>
+    <string name="splashscreen_about">Secure yourself during Trip</string>
+    <string name="berbagai_wisata_menarik_ntelah_tersedia_untuk_anda">Berbagai wisata menarik\ntelah tersedia untuk Anda</string>
+    <string name="hint_inputemail">Email</string>
+    <string name="login">Login</string>
+    <string name="lupa_password">Lupa password</string>
+    <string name="mendaftar">Mendaftar</string>
+    <string name="register_purpose">Mendaftar secara gratis hingga kapanpun\nbersama SeTrip</string>
+    <string name="imput_nama">Nama lengkap</string>
+    <string name="invalid_name">Maaf, nama tidak valid</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="konfirmasi_email">Konfirmasi email</string>
+    <string name="title_register">Registrasi</string>
+    <string name="invalid_email">Maaf, email tidak valid</string>
+    <string name="invalid_phonenbr">Maaf, nomor telepon tidak valid</string>
+    <string name="trouble">Maaf terdapat gangguan pada sistem</string>
+    <string name="berhasil">Selamat, akun anda berhasil terdaftar</string>
+    <string name="konfirmasi_keluar_aplikasi">Konfirmasi keluar aplikasi</string>
+    <string name="apakah_anda_yakin">"Anda yakin ingin keluar aplikasi ? "</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="maaf_password_anda_tidak_valid">Maaf, password anda tidak valid</string>
+    <string name="forgotpassword_purpose">Masukkan email anda\nyang sudah terdaftar untuk mendapat pesan\npengubahan password</string>
+    <string name="trouble1">Maaf, Email atau password anda salah, dan Pastikan Anda Terhubung dengan Internet</string>
+    <string name="welcome">Selamat datang di SeTrip</string>
+    <string name="success2">Sukses, silahkan buka Email/Gmail anda untuk ubah kata sandi</string>
+    <string name="beranda">Beranda</string>
+    <string name="tourism">Temukan wisata</string>
+    <string name="profil">Profil</string>
+    <string name="temukan_wisata">Temukan wisata</string>
+    <string name="nomor_handphone">Nomor handphone</string>
 </resources>
