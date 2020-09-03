@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">SeTrip</string>
-    <string name="splashscreen_title">Se-Trip</string>
     <string name="splashscreen_about">Secure yourself during Trip</string>
     <string name="berbagai_wisata_menarik_ntelah_tersedia_untuk_anda">Berbagai wisata menarik\ntelah tersedia untuk Anda</string>
     <string name="hint_inputemail">Email</string>
@@ -46,7 +45,7 @@
     <string name="selamat_pagi">Selamat Pagi</string>
     <string name="selamat_siang">Selamat Siang</string>
     <string name="pilih_mode">Pilih mode pengambilan gambar</string>
-    <string name="mohon_setujui_kamera"><![CDATA[Mohon setujui permission Kamera & Penyimpanan]]></string>
+    <string name="mohon_setujui_kamera">Mohon setujui permission kamera</string>
     <string name="mohon_setujui_galeri">Mohon setujui permission Penyimpanan</string>
     <string name="gambar_diperbarui">Gambar berhasil diperbarui</string>
     <string name="gambar_tidak">Maaf, upload tidak berhasil</string>
@@ -56,10 +55,19 @@
     <string name="message_empty">Pesan tidak boleh kosong</string>
     <string name="pilih">Pilih sebuah aksi</string>
     <string name="email">Email</string>
-    <string name="phone_number">Phone number</string>
+    <string name="phone_number">Nomor handphone</string>
     <string name="clearing_file">Membuat catatan baru</string>
     <string name="pengingatmu">Pengingatmu</string>
     <string name="tentang_aplikasi">Tentang aplikasi</string>
     <string name="ganti_bahasa">Ganti bahasa</string>
     <string name="ubah_username">Ubah username</string>
+    <string name="nama_pengguna">Nama pengguna</string>
+    <string name="setel_pengingat">Setel pengingat</string>
+    <string name="silahkan_masukkan_nama_anda">Silahkan masukkan nama anda</string>
+    <string name="batal">Batal</string>
+    <string name="konfirmasi">konfirmasi</string>
+    <string name="data_diperbarui">data anda diperbarui</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bahasa">Bahasa</string>
+
 </resources>

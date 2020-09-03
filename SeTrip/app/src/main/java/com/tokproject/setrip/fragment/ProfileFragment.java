@@ -15,6 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+
+import android.provider.MediaStore;
+import android.provider.Settings;
 
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
@@ -109,6 +114,7 @@ public class ProfileFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
         user = firebaseAuth.getCurrentUser();
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("User");
@@ -130,9 +136,10 @@ public class ProfileFragment extends Fragment {
         detail = view.findViewById(R.id.selamatBekerjaTv);
         avatarIv = view.findViewById(R.id.avatarIv);
 
+        checkUserStatus();
+
         loadDataUser();
 
-        checkUserStatus();
 
         viewTv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,6 +167,7 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+
     private void showNoteTv() {
         startActivity(new Intent(getActivity(), NoteReminderActivity.class));
     }
@@ -183,9 +191,10 @@ public class ProfileFragment extends Fragment {
                     emailTv.setText(email);
                     phoneNumber.setText(phone_nbr);
 
-                    Glide.with(Objects.requireNonNull(getActivity())).load(image)
-                            .error(R.drawable.ic_baseline_face_24)
-                            .placeholder(R.drawable.ic_baseline_face_24)
+
+                    Glide.with(ProfileFragment.this).load(image)
+                            .error(R.drawable.avatar_blank)
+                            .placeholder(R.drawable.avatar_blank)
                             .into(avatarIv);
 
                     showLoader(false);
@@ -399,6 +408,7 @@ public class ProfileFragment extends Fragment {
         startActivity(new Intent(getActivity(), MapsLocationActivity.class));
     }
 
+
     private void checkUserStatus() {
         //get current user
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -421,6 +431,8 @@ public class ProfileFragment extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.option_menu, menu);
 
+        //hide add group icon
+        menu.findItem(R.id.option_language).setVisible(false);
 
         super.onCreateOptionsMenu(menu, inflater);
     }

@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_timeline"
-        android:title="@string/beranda"
-        android:icon="@drawable/ic_baseline_dashboard_24" />
-
-    <item
         android:id="@+id/nav_tourism"
         android:title="@string/tourism"
         android:icon="@drawable/baseline_explore_black_24dp" />
+
+    <item
+        android:id="@+id/nav_timeline"
+        android:title="@string/beranda"
+        android:icon="@drawable/ic_baseline_dashboard_24" />
 
     <item
         android:id="@+id/nav_check"

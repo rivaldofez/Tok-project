@@ -8,13 +8,13 @@
     tools:context=".activity.SplashScreen">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/splashscreen_title"
+    <ImageView
+        android:id="@+id/logo_app"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:textSize="35sp"
-        android:textStyle="bold" />
+        android:src="@drawable/full"
+        android:contentDescription="@string/image" />
 
     <ProgressBar
         android:id="@+id/splashscreen_progressbar"
