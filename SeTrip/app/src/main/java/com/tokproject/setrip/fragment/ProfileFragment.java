@@ -433,6 +433,8 @@ public class ProfileFragment extends Fragment {
 
         //hide add group icon
         menu.findItem(R.id.option_language).setVisible(false);
+        menu.findItem(R.id.option_add).setVisible(false);
+
 
         super.onCreateOptionsMenu(menu, inflater);
     }

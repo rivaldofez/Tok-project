@@ -69,5 +69,10 @@
     <string name="konfirmasi">konfirmasi</string>
     <string name="data_diperbarui">data anda diperbarui</string>
     <string name="bahasa">Bahasa</string>
+    <string name="add_new_post">Buat postingan baru</string>
+    <string name="masukkan_judul">Masukkan judul</string>
+    <string name="masukkan_deskripsi">Masukkan deskripsi</string>
+    <string name="unggah_postingan">Unggah postingan</string>
+    <string name="post_published">Postingan berhasil dbuat</string>
 
 </resources>

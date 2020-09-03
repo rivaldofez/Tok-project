@@ -46,7 +46,7 @@ public class TourismFragment extends Fragment {
 
         //hide add group icon
         menu.findItem(R.id.option_setting).setVisible(false);
-
+        menu.findItem(R.id.option_add).setVisible(false);
 
         super.onCreateOptionsMenu(menu, inflater);
     }
