@@ -1,5 +1,6 @@
 package com.tokproject.setrip.activity;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -33,9 +34,21 @@ import com.tokproject.setrip.fragment.ProfileFragment;
 
 import java.util.HashMap;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
+
+import com.tokproject.setrip.R;
+
+
 public class SettingProfileActivity extends AppCompatActivity {
 
     private ProgressBar progressBar;
+
     private ImageView logoApp;
 
     FirebaseAuth firebaseAuth;
@@ -48,6 +61,7 @@ public class SettingProfileActivity extends AppCompatActivity {
     Button btndismiss;
     EditText etChangeName;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +73,7 @@ public class SettingProfileActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
+
         logoApp = findViewById(R.id.logo_app);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -68,6 +83,7 @@ public class SettingProfileActivity extends AppCompatActivity {
 
         Glide.with(this).load(R.drawable.text_only)
                 .into(logoApp);
+
 
     }
 
@@ -86,6 +102,7 @@ public class SettingProfileActivity extends AppCompatActivity {
     }
 
     public void changeName(View view) {
+
 
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_change_name);
@@ -146,10 +163,10 @@ public class SettingProfileActivity extends AppCompatActivity {
     }
 
 
-
     public void aboutApps(View view) {
         startActivity(new Intent(this, AboutApps.class));
     }
+
 
     public void logout(View view) {
 

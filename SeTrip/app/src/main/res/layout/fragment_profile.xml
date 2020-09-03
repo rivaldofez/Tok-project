@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.ProfileFragment">
 
-<<<<<<< Updated upstream
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="PROFILE" />
-=======
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.ProfileFragment">
+      
         <ImageView
             android:id="@+id/backgroundIv"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/header_morning"
             android:contentDescription="@string/image" />
-
 
         <TextView
             android:id="@+id/selamatTv"
@@ -71,6 +70,17 @@
                 android:src="@drawable/ic_baseline_photo_camera_24"
                 android:contentDescription="@string/image" />
 
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_user"
+                android:layout_below="@+id/changePictureIv"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
@@ -79,6 +89,7 @@
                 android:layout_marginTop="16dp"
                 android:visibility="gone"
                 android:layout_below="@+id/changePictureIv"/>
+
 
         </RelativeLayout>
 
@@ -231,6 +242,7 @@
             <TextView
                 android:id="@+id/noteTv"
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:gravity="center"
@@ -273,15 +285,8 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@android:color/darker_gray"
-
             android:layout_below="@+id/viewLayout"/>
 
->>>>>>> Stashed changes
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout" />
-
-</RelativeLayout>
+</ScrollView>

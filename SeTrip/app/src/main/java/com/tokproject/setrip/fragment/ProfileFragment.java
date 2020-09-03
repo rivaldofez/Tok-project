@@ -1,33 +1,106 @@
 package com.tokproject.setrip.fragment;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-<<<<<<< Updated upstream
-=======
+
 import android.provider.MediaStore;
 import android.provider.Settings;
->>>>>>> Stashed changes
+
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.Login;
+import com.tokproject.setrip.activity.MapsLocationActivity;
+import com.tokproject.setrip.activity.NoteReminderActivity;
+import com.tokproject.setrip.activity.SettingProfileActivity;
+
+
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Objects;
+
+import static android.app.Activity.RESULT_OK;
 
 
 public class ProfileFragment extends Fragment {
 
-    private Button btnLogout;
-    private FirebaseAuth firebaseAuth;
-
     String uid;
+    //for checking profile picture
+    private String profile;
+
+    //firebase
+    FirebaseUser user;
+    FirebaseDatabase database;
+    DatabaseReference databaseReference;
+
+    //storage
+    private FirebaseAuth firebaseAuth;
+    private StorageReference storageReference;
+    //path where image will be created
+    private String storagePath = "user_profile_imgs/";
+
+    private ProgressBar progressBar;
+
+    private static final int CAMERA_REQUEST_CODE = 100;
+    private static final int STORAGE_REQUEST_CODE = 200;
+
+    private static final int IMAGE_PICK_GALLERY_CODE = 300;
+    private static final int IMAGE_PICK_CAMERA_CODE = 400;
+
+    String[] cameraPermission;
+    String[] storagePermission;
+
+    //uri of picked image
+    Uri image_uri;
+
+    private ImageView backgroundIv;
+    private ImageView avatarIv;
+    private TextView selamatTv;
+    private TextView nameTv;
+    private TextView emailTv;
+    private TextView phoneNumber;
+    private TextView detail;
+    private TextView noteTv;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -40,12 +113,8 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
 
-        btnLogout = view.findViewById(R.id.btnLogout);
         firebaseAuth = FirebaseAuth.getInstance();
-<<<<<<< Updated upstream
 
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-=======
         user = firebaseAuth.getCurrentUser();
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("User");
@@ -72,7 +141,6 @@ public class ProfileFragment extends Fragment {
         loadDataUser();
 
 
-
         viewTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,19 +156,18 @@ public class ProfileFragment extends Fragment {
         });
 
         noteTv.setOnClickListener(new View.OnClickListener() {
->>>>>>> Stashed changes
             @Override
             public void onClick(View v) {
-                firebaseAuth.signOut();
-                checkUserStatus();
+                showNoteTv();
             }
         });
+
+        greetings();
 
         return view;
     }
 
-<<<<<<< Updated upstream
-=======
+
     private void showNoteTv() {
         startActivity(new Intent(getActivity(), NoteReminderActivity.class));
     }
@@ -123,6 +190,7 @@ public class ProfileFragment extends Fragment {
                     nameTv.setText(name);
                     emailTv.setText(email);
                     phoneNumber.setText(phone_nbr);
+
 
                     Glide.with(ProfileFragment.this).load(image)
                             .error(R.drawable.avatar_blank)
@@ -340,7 +408,7 @@ public class ProfileFragment extends Fragment {
         startActivity(new Intent(getActivity(), MapsLocationActivity.class));
     }
 
->>>>>>> Stashed changes
+
     private void checkUserStatus() {
         //get current user
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -349,9 +417,6 @@ public class ProfileFragment extends Fragment {
             uid = user.getUid();
         } else {
             startActivity(new Intent(getActivity(), Login.class));
-<<<<<<< Updated upstream
-            getActivity().finish();
-=======
             Objects.requireNonNull(getActivity()).finish();
         }
     }
@@ -365,8 +430,10 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.option_menu, menu);
+
         //hide add group icon
         menu.findItem(R.id.option_language).setVisible(false);
+
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -384,7 +451,6 @@ public class ProfileFragment extends Fragment {
             progressBar.setVisibility(View.VISIBLE);
         } else {
             progressBar.setVisibility(View.GONE);
->>>>>>> Stashed changes
         }
     }
 }
