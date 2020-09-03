@@ -9,6 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+        <activity android:name=".activity.AboutApps" />
+        <activity android:name=".activity.NoteReminderActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity
+            android:name=".activity.MapsLocationActivity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".activity.SettingProfileActivity" />
+
         <activity android:name=".activity.DashboardActivity" />
         <activity android:name=".activity.ForgotPassword" />
         <activity android:name=".activity.Register" />

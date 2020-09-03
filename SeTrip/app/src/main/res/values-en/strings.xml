@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SeTrip</string>
-    <string name="splashscreen_title">Se-Trip</string>
     <string name="splashscreen_about">Secure yourself during Trip</string>
-    <string name="berbagai_wisata_menarik_ntelah_tersedia_untuk_anda">Berbagai wisata menarik\ntelah tersedia untuk Anda</string>
+    <string name="berbagai_wisata_menarik_ntelah_tersedia_untuk_anda">Various interesting tourism\nhas been already for you</string>
     <string name="hint_inputemail">Email</string>
     <string name="login">Login</string>
-    <string name="lupa_password">Lupa password</string>
-    <string name="mendaftar">Mendaftar</string>
-    <string name="register_purpose">Mendaftar secara gratis hingga kapanpun\nbersama SeTrip</string>
-    <string name="imput_nama">Nama lengkap</string>
-    <string name="invalid_name">Maaf, nama tidak valid</string>
+    <string name="lupa_password">Forgot password</string>
+    <string name="mendaftar">Register</string>
+    <string name="register_purpose">Register for free until whenever\nwith SeTrip</string>
+    <string name="imput_nama">Full name</string>
+    <string name="invalid_name">Sorry, invalid name</string>
     <string name="sign_up">Sign Up</string>
+<<<<<<< Updated upstream
     <string name="konfirmasi_email">Konfirmasi email</string>
     <string name="title_register">Registrasi</string>
     <string name="invalid_email">Maaf, email tidak valid</string>
@@ -32,4 +32,62 @@
     <string name="profil">Profil</string>
     <string name="temukan_wisata">Temukan wisata</string>
     <string name="nomor_handphone">Nomor handphone</string>
+=======
+    <string name="konfirmasi_email">Confirm email</string>
+    <string name="title_register">Register</string>
+    <string name="invalid_email">Sorry, email is invalid</string>
+    <string name="invalid_phonenbr">Sorry, the phone number is invalid</string>
+    <string name="trouble">Sorry there is a system trouble</string>
+    <string name="berhasil">Your account has been successfully registered</string>
+    <string name="konfirmasi_keluar_aplikasi">Confirm application exit</string>
+    <string name="apakah_anda_yakin">"Are you sure you want to exit the application?"</string>
+    <string name="ya">Yes</string>
+    <string name="tidak">No</string>
+    <string name="maaf_password_anda_tidak_valid">Sorry, your password is invalid</string>
+    <string name="forgotpassword_purpose">Enter your email \nwhich has been registered\nto get a message passing</string>
+    <string name="trouble1">Sorry, your email or password is wrong, and make sure you are connected to the internet</string>
+    <string name="welcome">Welcome to SETRIP</string>
+    <string name="success2">Success, please open your Email / Gmail to change password</string>
+    <string name="beranda">Timeline</string>
+    <string name="tourism">Find tourism</string>
+    <string name="profil">Profile</string>
+    <string name="temukan_wisata">Find tourism</string>
+    <string name="nomor_handphone">Phone number</string>
+    <string name="option">Option</string>
+    <string name="username_user">Username user</string>
+    <string name="logout">Logout</string>
+    <string name="selamat_waktu">Good time</string>
+    <string name="jangan_lupa_untuk_nikmati_waktumu">Do not forget to enjoy your time</string>
+    <string name="email_user">email.123@email.com</string>
+    <string name="setting_profile_page">Profile setting</string>
+    <string name="buat_catatan">Take notes / reminders</string>
+    <string name="tampilkan_lokasi">See all tourist attraction locations</string>
+    <string name="selamat_malam">Good Night</string>
+    <string name="selamat_pagi">Good Morning</string>
+    <string name="selamat_siang">Good Afternoon</string>
+    <string name="pilih_mode">Select image mode</string>
+    <string name="mohon_setujui_kamera">Please accept the Camera and Storage permissions</string>
+    <string name="mohon_setujui_galeri">Please accept the Storage permissions</string>
+    <string name="gambar_diperbarui">Image updated successfully</string>
+    <string name="gambar_tidak">Sorry, the upload did not work</string>
+    <string name="gangguan">Sorry, there was an trouble during the upload</string>
+    <string name="judul_catatan">Note title</string>
+    <string name="title_empty">The title cannot be blank</string>
+    <string name="message_empty">Messages cannot be empty</string>
+    <string name="pilih">Take an action</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="clearing_file">Create new note</string>
+    <string name="pengingatmu">Your reminder</string>
+    <string name="tentang_aplikasi">About application</string>
+    <string name="ganti_bahasa">Change language</string>
+    <string name="ubah_username">Change username</string>
+    <string name="nama_pengguna">Username</string>
+    <string name="setel_pengingat">Set reminder</string>
+    <string name="silahkan_masukkan_nama_anda">Please enter your name</string>
+    <string name="batal">Cancel</string>
+    <string name="konfirmasi">Confirm</string>
+    <string name="data_diperbarui">your data is updated</string>
+    <string name="bahasa">Language</string>
+>>>>>>> Stashed changes
 </resources>
