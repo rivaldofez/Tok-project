@@ -71,16 +71,6 @@
                 android:contentDescription="@string/image" />
 
 
-            <TextView
-                android:id="@+id/usernameTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/username_user"
-                android:layout_below="@+id/changePictureIv"
-                android:layout_centerHorizontal="true"
-                android:textStyle="bold" />
-
-
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
@@ -112,7 +102,7 @@
                     android:id="@+id/usernameIv"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/ic_baseline_alternate_email_24"
+                    android:background="@drawable/ic_baseline_person_24"
                     android:backgroundTint="@color/colorPrimary"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
