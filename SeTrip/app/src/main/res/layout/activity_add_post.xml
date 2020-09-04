@@ -28,8 +28,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="200dp"
+            android:padding="40dp"
+            android:src="@drawable/ic_baseline_add_to_photos_24"
             android:background="@color/colorPrimary"
             android:contentDescription="@string/image" />
+
 
         <EditText
             android:id="@+id/pDescEt"
