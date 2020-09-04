@@ -29,8 +29,7 @@ public class CheckFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_profile, container, false);
+        View view =  inflater.inflate(R.layout.fragment_check, container, false);
 
         imgCheckin = view.findViewById(R.id.imgCheckin);
         imgCheckout = view.findViewById(R.id.imgCheckout);
@@ -38,7 +37,7 @@ public class CheckFragment extends Fragment {
         imgCheckin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), CheckInActivity.class);
+                Intent intent = new Intent(getActivity(), CheckInActivity.class);
                 startActivity(intent);
             }
         });
