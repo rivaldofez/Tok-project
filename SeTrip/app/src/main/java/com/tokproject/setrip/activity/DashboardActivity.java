@@ -39,7 +39,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         //home fragment transaction default on start
         actionBar.setTitle(R.string.temukan_wisata);
-        TimelineFragment fragment2 = new TimelineFragment();
+        TourismFragment fragment2 = new TourismFragment();
         FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
         ft2.replace(R.id.content, fragment2, "");
         ft2.commit();

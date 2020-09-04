@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.bumptech.glide.Glide;
 import com.tokproject.setrip.R;
 
 import java.util.Locale;
@@ -18,6 +20,10 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
+
+        ImageView imageView = findViewById(R.id.logo_app);
+
+        Glide.with(this).load(R.drawable.full).into(imageView);
 
         //inisiasi view
         final ProgressBar progressBar = findViewById(R.id.splashscreen_progressbar);

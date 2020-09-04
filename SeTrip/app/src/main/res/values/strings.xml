@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SeTrip</string>
-    <string name="splashscreen_title">Se-Trip</string>
     <string name="splashscreen_about">Secure yourself during Trip</string>
     <string name="berbagai_wisata_menarik_ntelah_tersedia_untuk_anda">Berbagai wisata menarik\ntelah tersedia untuk Anda</string>
     <string name="hint_inputemail">Email</string>
@@ -29,7 +29,51 @@
     <string name="beranda">Beranda</string>
     <string name="tourism">Temukan wisata</string>
     <string name="profil">Profil</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="temukan_wisata">Temukan wisata</string>
     <string name="nomor_handphone">Nomor handphone</string>
+    <string name="image" translatable="false">image</string>
+    <string name="option">Option</string>
+    <string name="username_user">Username user</string>
+    <string name="logout">Logout</string>
+    <string name="selamat_waktu">Selamat waktu</string>
+    <string name="jangan_lupa_untuk_nikmati_waktumu">Jangan lupa untuk nikmati waktumu</string>
+    <string name="email_user">email.123@email.com</string>
+    <string name="setting_profile_page">Pengaturan profil</string>
+    <string name="buat_catatan">Buat catatan / pengingat</string>
+    <string name="tampilkan_lokasi">Lihat seluruh lokasi Objek wisata</string>
+    <string name="map_key" translatable="false">AIzaSyAJ6655TnlgGC0S2eB2_32nb2oZZxAm6rg</string>
+    <string name="selamat_malam">Selamat Malam</string>
+    <string name="selamat_pagi">Selamat Pagi</string>
+    <string name="selamat_siang">Selamat Siang</string>
+    <string name="pilih_mode">Pilih mode pengambilan gambar</string>
+    <string name="mohon_setujui_kamera">Mohon setujui permission kamera</string>
+    <string name="mohon_setujui_galeri">Mohon setujui permission Penyimpanan</string>
+    <string name="gambar_diperbarui">Gambar berhasil diperbarui</string>
+    <string name="gambar_tidak">Maaf, upload tidak berhasil</string>
+    <string name="gangguan">Maaf, terdapat gangguan ketika upload</string>
+    <string name="judul_catatan">Judul catatan</string>
+    <string name="title_empty">Judul tidak boleh kosong</string>
+    <string name="message_empty">Pesan tidak boleh kosong</string>
+    <string name="pilih">Pilih sebuah aksi</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Nomor handphone</string>
+    <string name="clearing_file">Membuat catatan baru</string>
+    <string name="pengingatmu">Pengingatmu</string>
+    <string name="tentang_aplikasi">Tentang aplikasi</string>
+    <string name="ganti_bahasa">Ganti bahasa</string>
+    <string name="ubah_username">Ubah username</string>
+    <string name="nama_pengguna">Nama pengguna</string>
+    <string name="setel_pengingat">Setel pengingat</string>
+    <string name="silahkan_masukkan_nama_anda">Silahkan masukkan nama anda</string>
+    <string name="batal">Batal</string>
+    <string name="konfirmasi">konfirmasi</string>
+    <string name="data_diperbarui">data anda diperbarui</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="add_new_post">Buat postingan baru</string>
+    <string name="masukkan_judul">Masukkan judul</string>
+    <string name="masukkan_deskripsi">Masukkan deskripsi</string>
+    <string name="unggah_postingan">Unggah postingan</string>
+    <string name="post_published">Postingan berhasil dbuat</string>
+    <string name="nama">Nama</string>
+
 </resources>
