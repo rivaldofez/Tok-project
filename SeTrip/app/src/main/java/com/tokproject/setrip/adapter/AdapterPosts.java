@@ -3,6 +3,7 @@ package com.tokproject.setrip.adapter;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,6 +25,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,6 +35,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.tokproject.setrip.R;
+import com.tokproject.setrip.activity.PostDetailActivity;
 import com.tokproject.setrip.model.ModelPost;
 
 import java.util.Calendar;
@@ -49,7 +52,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
     private DatabaseReference likeRef; //for likes database node
     private DatabaseReference postRef1; //reference of posts
 
-    boolean mProcessLike = false;
+    private boolean mProcessLike = false;
 
     public AdapterPosts(Context context, List<ModelPost> postList) {
         this.context = context;
@@ -81,6 +84,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         final String pImage = postList.get(position).getpImage();
         String pTimeStamp = postList.get(position).getpTime();
         String pLikes = postList.get(position).getpLikes();
+        String pComments = postList.get(position).getpComments();
 
         Calendar calendar = Calendar.getInstance(Locale.getDefault());
         calendar.setTimeInMillis(Long.parseLong(pTimeStamp));
@@ -92,6 +96,8 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         holder.pTitleTv.setText(pTitle);
         holder.pDesc.setText(pDesc);
         holder.pLikesTv.setText(pLikes + " Menyukai"); //e.g. 100 likes
+        holder.pCommentsTv.setText(pComments + " Komentar");
+
 
         setLikes(holder, pId);
 
@@ -162,12 +168,11 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         holder.pCommentIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //wiil imlement later
+                Intent intent = new Intent(context, PostDetailActivity.class);
+                intent.putExtra("postId", pId);
+                context.startActivity(intent);
             }
         });
-
-
-
 
     }
 
@@ -197,8 +202,10 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
 
         //show delete option in only post(s) currently sign-in
         if(uid.equals(myUid)) {
-            popupMenu.getMenu().add(Menu.NONE,0,0, "Delete");
+            popupMenu.getMenu().add(Menu.NONE,0,0, R.string.hapus);
         }
+        popupMenu.getMenu().add(Menu.NONE, 1, 0, R.string.komentar);
+
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -207,6 +214,11 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                     //delete is clicked
                     beginDelete(pId, pImage);
 
+                } else if (id == 1) {
+                    Intent intent = new Intent(context, PostDetailActivity.class);
+//                    intent.putExtra("key", "editPost");
+                    intent.putExtra("postId", pId);
+                    context.startActivity(intent);
                 }
                 return false;
             }
@@ -304,7 +316,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
     class MyHolder extends RecyclerView.ViewHolder{
 
         ImageView uPictureIv, pImageIv, pLikeIv, pCommentIv;
-        TextView uNameTv, pTimeTv, pTitleTv, pDesc, pLikesTv;
+        TextView uNameTv, pTimeTv, pTitleTv, pDesc, pLikesTv, pCommentsTv;
         ImageButton moreBtn;
 
         public MyHolder(@NonNull View itemView) {
@@ -321,6 +333,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
             pDesc = itemView.findViewById(R.id.pDescTv);
             pLikesTv = itemView.findViewById(R.id.pLikesTv);
             moreBtn = itemView.findViewById(R.id.moreBtn);
+            pCommentsTv = itemView.findViewById(R.id.pCommentsTv);
 
 
 

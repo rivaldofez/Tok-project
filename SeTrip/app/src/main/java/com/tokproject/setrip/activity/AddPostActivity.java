@@ -382,6 +382,7 @@ public class AddPostActivity extends AppCompatActivity {
         menu.findItem(R.id.option_add).setVisible(false);
         menu.findItem(R.id.option_language).setVisible(false);
         menu.findItem(R.id.option_setting).setVisible(false);
+        menu.findItem(R.id.action_search).setVisible(false);
 
         return super.onCreateOptionsMenu(menu);
     }

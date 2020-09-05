@@ -77,5 +77,11 @@
     <string name="berhasil_menghapus">Berhasil menghapus postingan</string>
     <string name="menyukai">Menyukai</string>
     <string name="tidak_menyukai">Tidak menyukai</string>
+    <string name="detail_post">Detail postingan</string>
+    <string name="komentar_kosong">Komentar tidak boleh kosong</string>
+    <string name="komentar_ditambahkan">Komentar ditambahkan</string>
+    <string name="komentar_tidak_ditambahkan">Komentar tidak berhasil ditambahkan</string>
+    <string name="hapus">Hapus</string>
+    <string name="komentar">Komentar</string>
 
 </resources>

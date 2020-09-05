@@ -90,12 +90,27 @@
             android:background="@color/white"
             android:contentDescription="@string/image" />
 
-        <TextView
-            android:id="@+id/pLikesTv"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="120 Menyukai"
-            android:layout_marginStart="16dp"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pLikesTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="120 Menyukai"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/pCommentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Komentar"
+                android:layout_marginEnd="16dp"/>
+
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
