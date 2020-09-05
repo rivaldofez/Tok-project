@@ -195,6 +195,7 @@ public class AddPostActivity extends AppCompatActivity {
                                 hashMap.put("uid", uid);
                                 hashMap.put("uName", name);
                                 hashMap.put("uEmail", email);
+                                hashMap.put("pId", timeStamp);
                                 hashMap.put("uDp", dp);
                                 hashMap.put("pTitle", title);
                                 hashMap.put("pDescription", desc);
@@ -242,10 +243,13 @@ public class AddPostActivity extends AppCompatActivity {
             hashMap.put("uName", name);
             hashMap.put("uEmail", email);
             hashMap.put("uDp", dp);
+            hashMap.put("pId", timeStamp);
             hashMap.put("pTitle", title);
             hashMap.put("pDescription", desc);
             hashMap.put("pImage", "noImage");
             hashMap.put("pTime", timeStamp);
+            hashMap.put("pLikes","0" );
+            hashMap.put("pComments","0" );
 
             //path to store post data
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Posts");

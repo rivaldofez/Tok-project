@@ -75,5 +75,9 @@
     <string name="unggah_postingan">Unggah postingan</string>
     <string name="post_published">Postingan berhasil dbuat</string>
     <string name="nama">Nama</string>
+    <string name="maaf1">Tidak berhasil menghapus postingan</string>
+    <string name="berhasil_menghapus">Berhasil menghapus postingan</string>
+    <string name="menyukai">Menyukai</string>
+    <string name="tidak_menyukai">Tidak menyukai</string>
 
 </resources>
