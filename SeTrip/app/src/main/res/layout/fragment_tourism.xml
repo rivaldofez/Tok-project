@@ -1,15 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".fragment.TourismFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="TOURISM" />
 
-</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/infoWisata"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/icon_bg5">
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/logo_only" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siapkah anda berwisata bersama SETRIP ?"
+            android:layout_toEndOf="@+id/info"
+            android:layout_marginTop="27dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/penting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/judul"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="13dp"
+            android:padding="10dp"
+            android:layout_toEndOf="@+id/info"
+            android:text="Cari Wisata Favoritmu"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/infoCovid"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/icon_bg3">
+
+        <ImageView
+            android:id="@+id/covid19"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/virus" />
+
+        <TextView
+            android:id="@+id/judul_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tahukah kamu seberapa berbahaya \n Covid-19"
+            android:layout_toEndOf="@+id/covid19"
+            android:layout_marginTop="27dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/banner_penting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/judul_banner"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="13dp"
+            android:padding="10dp"
+            android:layout_toEndOf="@+id/covid19"
+            android:text="Mari membaca"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
