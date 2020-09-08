@@ -41,7 +41,7 @@ dependencies {
     //button spark
     implementation 'me.spark:submitbutton:1.0.1'
 
-    //awesome valodation for form validation
+    //awesome validation for form validation
     implementation 'com.basgeekball:awesome-validation:4.2'
 
     //QR Generator
