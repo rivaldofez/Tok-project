@@ -24,13 +24,14 @@
             android:layout_height="99dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="27dp"
-            android:src="@drawable/logo_only" />
+            android:src="@drawable/logo_only"
+            android:contentDescription="@string/image" />
 
         <TextView
             android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Siapkah anda berwisata bersama SETRIP ?"
+            android:text="@string/siapkah_anda_berwisata_bersama_setrip"
             android:layout_toEndOf="@+id/info"
             android:layout_marginTop="27dp"
             android:textColor="@android:color/white"
@@ -43,11 +44,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/judul"
-            android:layout_marginStart="38dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="13dp"
             android:padding="10dp"
             android:layout_toEndOf="@+id/info"
-            android:text="Cari Wisata Favoritmu"
+            android:text="@string/cari_wisata_favoritmu"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -69,13 +70,14 @@
             android:layout_height="99dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="27dp"
-            android:src="@drawable/virus" />
+            android:src="@drawable/virus"
+            android:contentDescription="@string/image" />
 
         <TextView
             android:id="@+id/judul_banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tahukah kamu seberapa berbahaya \n Covid-19"
+            android:text="@string/tips_menghindari_covid_19_selama_berwisata_dengan_mudah"
             android:layout_toEndOf="@+id/covid19"
             android:layout_marginTop="27dp"
             android:textColor="@android:color/white"
@@ -88,11 +90,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/judul_banner"
-            android:layout_marginStart="58dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="13dp"
             android:padding="10dp"
             android:layout_toEndOf="@+id/covid19"
-            android:text="Mari membaca"
+            android:text="@string/mari_membaca"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />

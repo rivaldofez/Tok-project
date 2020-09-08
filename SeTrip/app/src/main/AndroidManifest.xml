@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.InfoWisataActivity"></activity>
+        <activity android:name=".activity.DetailInfoWisataActivity"></activity>
+        <activity android:name=".activity.InfoWisataActivity" />
         <activity android:name=".activity.InfoCovid19Activity" />
         <activity android:name=".activity.TpisCegahCovidActivity" />
         <activity android:name=".activity.TipsWisataAmanActivity" />
