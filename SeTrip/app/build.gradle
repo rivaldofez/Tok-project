@@ -66,4 +66,7 @@ dependencies {
 
     implementation 'com.loopj.android:android-async-http:1.4.9'
 
+    //gif imager
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
 }
