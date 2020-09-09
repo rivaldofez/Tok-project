@@ -7,10 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".activity.InfoWisataActivity">
 
+
+    <EditText
+        android:id="@+id/pencarianEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_et2"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:hint="Cari wisata favoritmu"
+        android:layout_marginTop="16dp"
+        android:autofillHints="no" />
+
+    <ImageView
+        android:id="@+id/sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_sort_24"
+        android:layout_below="@+id/pencarianEt"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cari"
+        android:layout_toEndOf="@id/sort"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/pencarianEt"
+        android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="urutkan"
+        android:layout_toStartOf="@+id/fillter"
+        android:layout_below="@+id/pencarianEt"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:id="@+id/fillter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_filter_list_24"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/pencarianEt"
+        android:layout_marginEnd="20dp" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_hotel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/sort"
         tools:listitem="@layout/item_row_wisata" />
 
 
