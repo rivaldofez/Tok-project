@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Cream">#FADCAC</color>
-    <color name="colorPrimary">#158467</color>
-    <color name="colorAccent">#197163</color>
-    <color name="colorPrimaryDark">#065446</color>
+    <color name="colorPrimary">#065446</color>
+    <color name="colorAccent">#F58634</color>
+    <color name="colorPrimaryDark">#158467</color>
+    <color name="darkBlue">#076173</color>
+    <color name="mediumBlue">#06C5CC</color>
 
 </resources>
