@@ -34,19 +34,10 @@
         android:id="@+id/splashscreen_progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/splashscreen_about"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
-        android:id="@+id/splashscreen_about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/splashscreen_about"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp"
-        android:textSize="20sp"/>
+        android:layout_marginBottom="40dp" />
+
 
 
 </RelativeLayout>
