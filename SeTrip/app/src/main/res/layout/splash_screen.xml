@@ -8,13 +8,27 @@
     tools:context=".activity.SplashScreen">
 
 
-    <ImageView
-        android:id="@+id/logo_app"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/full"
-        android:contentDescription="@string/image" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/logo_app"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo_gif"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/text_only"
+            android:layout_below="@id/logo_app"/>
+
+    </RelativeLayout>
+
+
 
     <ProgressBar
         android:id="@+id/splashscreen_progressbar"

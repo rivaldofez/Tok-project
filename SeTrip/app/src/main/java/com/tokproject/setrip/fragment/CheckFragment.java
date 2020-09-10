@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.CheckInActivity;
@@ -17,8 +18,8 @@ import com.tokproject.setrip.activity.CheckoutActivity;
 
 public class CheckFragment extends Fragment {
 
-    private ImageView imgCheckin;
-    private ImageView imgCheckout;
+    private RelativeLayout containerCheckin;
+    private RelativeLayout containerCheckout;
 
 
     public CheckFragment() {
@@ -32,10 +33,12 @@ public class CheckFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_check, container, false);
 
-        imgCheckin = view.findViewById(R.id.imgCheckin);
-        imgCheckout = view.findViewById(R.id.imgCheckout);
+        containerCheckin = view.findViewById(R.id.containerCheckin);
+        containerCheckout = view.findViewById(R.id.containerCheckout);
 
-        imgCheckin.setOnClickListener(new View.OnClickListener() {
+
+
+        containerCheckin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CheckInActivity.class);

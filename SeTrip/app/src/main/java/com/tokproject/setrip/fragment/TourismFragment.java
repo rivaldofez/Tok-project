@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.Settings;
 import android.view.LayoutInflater;
@@ -14,12 +15,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.tokproject.setrip.R;
-import com.tokproject.setrip.activity.SettingProfileActivity;
+import com.tokproject.setrip.activity.InfoCovid19Activity;
+import com.tokproject.setrip.activity.InfoWisataActivity;
 
 
 public class TourismFragment extends Fragment {
+
+
+    RelativeLayout infoWisata, infoCovid;
 
 
     public TourismFragment() {
@@ -27,11 +33,31 @@ public class TourismFragment extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tourism, container, false);
+        View view =  inflater.inflate(R.layout.fragment_tourism, container, false);
+
+        infoWisata = view.findViewById(R.id.infoWisata);
+        infoCovid = view.findViewById(R.id.infoCovid);
+
+        infoWisata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), InfoWisataActivity.class));
+            }
+        });
+
+        infoCovid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), InfoCovid19Activity.class));
+            }
+        });
+
+        return view;
     }
 
     @Override

@@ -100,6 +100,7 @@ public class TimelineFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 postList.clear();
+
                 for(DataSnapshot ds: snapshot.getChildren()) {
                     ModelPost modelPost = ds.getValue(ModelPost.class);
 
