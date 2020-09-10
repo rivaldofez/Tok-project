@@ -26,7 +26,4 @@
         android:title="search"
         app:actionViewClass="android.widget.SearchView"/>
 
-
-
-
 </menu>

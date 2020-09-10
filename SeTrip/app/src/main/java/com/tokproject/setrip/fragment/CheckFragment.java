@@ -3,15 +3,24 @@ package com.tokproject.setrip.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 
 import com.tokproject.setrip.R;
+import com.tokproject.setrip.activity.AddPostActivity;
 import com.tokproject.setrip.activity.CheckInActivity;
 import com.tokproject.setrip.activity.CheckoutActivity;
 
@@ -26,17 +35,15 @@ public class CheckFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view =  inflater.inflate(R.layout.fragment_check, container, false);
 
         containerCheckin = view.findViewById(R.id.containerCheckin);
         containerCheckout = view.findViewById(R.id.containerCheckout);
-
-
 
         containerCheckin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,5 +62,22 @@ public class CheckFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_check, menu);
+
+        MenuItem item = menu.findItem(R.id.option_add);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+
+
+        super.onCreateOptionsMenu(menu, inflater);
     }
 }
