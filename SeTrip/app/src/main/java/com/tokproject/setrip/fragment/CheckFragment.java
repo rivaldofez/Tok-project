@@ -46,7 +46,7 @@ public class CheckFragment extends Fragment {
             }
         });
 
-        imgCheckout.setOnClickListener(new View.OnClickListener() {
+        containerCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CheckoutActivity.class);

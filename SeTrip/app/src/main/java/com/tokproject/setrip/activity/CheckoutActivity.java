@@ -1,5 +1,6 @@
 package com.tokproject.setrip.activity;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
@@ -19,7 +20,7 @@ public class CheckoutActivity extends AppCompatActivity {
     ImageView QRCode;
     Button btnGenerate;
     String uid;
-    private FirebaseAuth firebaseAuth;
+    private ActionBar actionBar;
 
     private static final String TAG = "Checkout Activity";
 
@@ -29,7 +30,6 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        firebaseAuth = FirebaseAuth.getInstance();
         QRCode = findViewById(R.id.imgQR);
         btnGenerate = findViewById(R.id.btnGenerate);
 
@@ -44,6 +44,16 @@ public class CheckoutActivity extends AppCompatActivity {
                 generateQR(uid);
             }
         });
+        actionBar = getSupportActionBar();
+        actionBar.setTitle("Check Out");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 
     public void generateQR(String data){
