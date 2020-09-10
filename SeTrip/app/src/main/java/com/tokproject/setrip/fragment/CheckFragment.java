@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.CheckInActivity;
+import com.tokproject.setrip.activity.CheckoutActivity;
 
 
 public class CheckFragment extends Fragment {
@@ -41,6 +42,14 @@ public class CheckFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CheckInActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CheckoutActivity.class);
                 startActivity(intent);
             }
         });
