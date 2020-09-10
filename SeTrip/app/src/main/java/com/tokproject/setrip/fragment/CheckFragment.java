@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 
+import com.bumptech.glide.Glide;
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.AddPostActivity;
 import com.tokproject.setrip.activity.CheckInActivity;
@@ -30,6 +31,7 @@ public class CheckFragment extends Fragment {
     private RelativeLayout containerCheckin;
     private RelativeLayout containerCheckout;
 
+    private ImageView imgCheckin, imgCheckout;
 
     public CheckFragment() {
         // Required empty public constructor
@@ -44,6 +46,12 @@ public class CheckFragment extends Fragment {
 
         containerCheckin = view.findViewById(R.id.containerCheckin);
         containerCheckout = view.findViewById(R.id.containerCheckout);
+
+        imgCheckin = view.findViewById(R.id.imgCheckin);
+        imgCheckout = view.findViewById(R.id.imgCheckout);
+
+        Glide.with(getActivity()).load(R.drawable.checkin).into(imgCheckin);
+        Glide.with(getActivity()).load(R.drawable.checkout).into(imgCheckout);
 
         containerCheckin.setOnClickListener(new View.OnClickListener() {
             @Override

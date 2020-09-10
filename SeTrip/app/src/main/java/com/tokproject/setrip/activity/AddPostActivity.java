@@ -194,6 +194,8 @@ public class AddPostActivity extends AppCompatActivity {
                                 HashMap<Object, String> hashMap = new HashMap<>();
                                 hashMap.put("uid", uid);
                                 hashMap.put("uName", name);
+                                hashMap.put("pLikes", "0");
+                                hashMap.put("pComments", "0");
                                 hashMap.put("uEmail", email);
                                 hashMap.put("pId", timeStamp);
                                 hashMap.put("uDp", dp);

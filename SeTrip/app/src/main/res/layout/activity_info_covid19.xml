@@ -70,7 +70,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5sp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="13.645"
+                            android:text="207.203"
                             android:textAlignment="center"
                             android:textColor="@android:color/holo_red_light"
                             android:textSize="20sp"
@@ -116,7 +116,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5sp"
                                 android:fontFamily="sans-serif-medium"
-                                android:text="2607"
+                                android:text="147.510"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/holo_green_dark"
                                 android:textSize="20sp"
@@ -157,7 +157,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5sp"
                                 android:fontFamily="sans-serif-medium"
-                                android:text="959"
+                                android:text="8.456"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/darker_gray"
                                 android:textSize="20sp"
@@ -276,7 +276,7 @@
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/icon_safety"
                             android:layout_below="@+id/safety_text"
-                            android:text="@string/membantu_anda" />
+                            android:text="Persiapan matang sebelum berangkat pariwisata" />
 
 
                     </RelativeLayout>
@@ -323,7 +323,7 @@
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/icon_lampu"
                             android:layout_below="@+id/lampu"
-                            android:text="@string/membantu_anda" />
+                            android:text="Memberikan informasi terkait cara mencegah Covid-19 secara efektif dan mudah dilakukan" />
 
 
                     </RelativeLayout>
