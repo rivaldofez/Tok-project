@@ -20,7 +20,7 @@ public class DetailInfoWisataActivity extends AppCompatActivity {
     ImageView img;
     TextView tv_name, tv_detail, tv_lokasi;
 
-    Button btnTandai, btnLike, btnShare;
+    Button btnTandai, btnLike, btnShare, btnTourGuide;
 
     public static final String EXTRA_NAME = "extra_name";
     public static final String EXTRA_DETAIL = "extra_detail";
@@ -50,6 +50,7 @@ public class DetailInfoWisataActivity extends AppCompatActivity {
         btnTandai = findViewById(R.id.bt_pesan);
         btnLike = findViewById(R.id.bt_whistlist);
         btnShare = findViewById(R.id.bt_chat);
+        btnTourGuide = findViewById(R.id.tourGuide);
 
         Glide.with(this).load(getIntent().getIntExtra(EXTRA_FOTO, 0))
                 .error(R.drawable.ic_baseline_face_24)
@@ -80,6 +81,13 @@ public class DetailInfoWisataActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Kamu Membagikan " + name, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnTourGuide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DetailInfoWisataActivity.this, TourGuideActivity.class));
             }
         });
     }

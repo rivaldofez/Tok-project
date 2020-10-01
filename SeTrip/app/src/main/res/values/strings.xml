@@ -124,5 +124,11 @@
     <string name="nomor_yang_dapat_dihubungi">Nomor yang dapat dihubungi</string>
     <string name="tambah_apd_baru">Tambah APD baru</string>
     <string name="not_empty">Kolom tidak boleh kosong</string>
+    <string name="butuh_pemandu_wisata">Butuh pemandu wisata ?</string>
+    <string name="ingin_berkarir_menjadi_pemandu_wisata">Ingin berkarir menjadi Pemandu Wisata ?</string>
+    <string name="unggah_biodata">Unggah biodata</string>
+    <string name="deskripsikan_singkat_diri_anda">Deskripsikan singkat diri anda</string>
+    <string name="usia_anda">Usia anda</string>
+    <string name="nama_anda">Nama anda</string>
 
 </resources>

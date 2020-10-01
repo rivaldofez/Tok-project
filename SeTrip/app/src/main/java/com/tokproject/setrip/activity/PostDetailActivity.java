@@ -402,6 +402,9 @@ public class PostDetailActivity extends AppCompatActivity {
         menu.findItem(R.id.option_language).setVisible(false);
         menu.findItem(R.id.option_add).setVisible(false);
         menu.findItem(R.id.action_search).setVisible(false);
+        menu.findItem(R.id.option_about_feature).setVisible(false);
+        menu.findItem(R.id.option_my_toko).setVisible(false);
+        menu.findItem(R.id.option_open_toko).setVisible(false);
 
         return super.onCreateOptionsMenu(menu);
     }

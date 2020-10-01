@@ -89,6 +89,17 @@
                 android:drawableTop="@drawable/ic_baseline_share_24"
                 android:background="@drawable/btn_border"
                 android:layout_toStartOf="@+id/bt_whistlist" />
+
+            <Button
+                android:id="@+id/tourGuide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/bt_whistlist"
+                android:text="@string/butuh_pemandu_wisata"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccent" />
+
         </RelativeLayout>
 
     </LinearLayout>

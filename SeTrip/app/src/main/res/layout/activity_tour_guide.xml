@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TourGuideActivity">
+
+    <Button
+        android:id="@+id/karir_tourguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/ingin_berkarir_menjadi_pemandu_wisata"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        tools:ignore="RelativeOverlap" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tgRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/karir_tourguide"
+        android:layout_marginTop="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
