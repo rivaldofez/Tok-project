@@ -20,12 +20,13 @@ import android.widget.RelativeLayout;
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.InfoCovid19Activity;
 import com.tokproject.setrip.activity.InfoWisataActivity;
+import com.tokproject.setrip.activity.TokoApdActivity;
 
 
 public class TourismFragment extends Fragment {
 
 
-    RelativeLayout infoWisata, infoCovid;
+    RelativeLayout infoWisata, infoCovid, tokoApd;
 
 
     public TourismFragment() {
@@ -42,6 +43,7 @@ public class TourismFragment extends Fragment {
 
         infoWisata = view.findViewById(R.id.infoWisata);
         infoCovid = view.findViewById(R.id.infoCovid);
+        tokoApd = view.findViewById(R.id.tokoApd);
 
         infoWisata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,13 @@ public class TourismFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), InfoCovid19Activity.class));
+            }
+        });
+
+        tokoApd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), TokoApdActivity.class));
             }
         });
 
@@ -74,6 +83,9 @@ public class TourismFragment extends Fragment {
         menu.findItem(R.id.option_setting).setVisible(false);
         menu.findItem(R.id.option_add).setVisible(false);
         menu.findItem(R.id.action_search).setVisible(false);
+        menu.findItem(R.id.option_open_toko).setVisible(false);
+        menu.findItem(R.id.option_about_feature).setVisible(false);
+        menu.findItem(R.id.option_my_toko).setVisible(false);
 
         super.onCreateOptionsMenu(menu, inflater);
     }

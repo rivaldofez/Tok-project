@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/namaTokoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:autoLink="all"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/nama_toko"/>
+
+                <TextView
+                    android:id="@+id/lokasiTokoTv"
+                    android:autoLink="all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi" />
+
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                android:contentDescription="@string/image" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/hargaTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp.20.000,00"
+            android:autoLink="all"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+        <TextView
+            android:id="@+id/deskripsiTokoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi toko"
+            android:autoLink="all"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp" />
+
+        <ImageView
+            android:id="@+id/pImageIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:contentDescription="@string/image" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nomor_telepon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="Nomor telepon" />
+
+            <Button
+                android:id="@+id/hubungi_toko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hubungi"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_baseline_local_phone_24" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,8 +1,10 @@
 package com.tokproject.setrip.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -212,7 +214,23 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                 int id = item.getItemId();
                 if(id == 0) {
                     //delete is clicked
-                    beginDelete(pId, pImage);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle(R.string.menghapus_postingan);
+                    builder.setIcon(R.drawable.ic_baseline_delete_24);
+                    builder.setMessage(R.string.yakin_ingin_menghapus);
+                    builder.setPositiveButton(R.string.ya, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            beginDelete(pId, pImage);
+                        }
+                    });
+                    builder.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    });
+                    builder.create().show();
 
                 } else if (id == 1) {
                     Intent intent = new Intent(context, PostDetailActivity.class);

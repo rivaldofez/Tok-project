@@ -28,7 +28,7 @@
                 android:id="@+id/judul_banner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tips Wisata Aman di tengah Wabah Covid-19"
+                android:text="Tips Mencegah Covid-19 dengan mudah"
                 android:textAlignment="center"
                 android:layout_marginTop="27dp"
                 android:layout_marginBottom="20dp"

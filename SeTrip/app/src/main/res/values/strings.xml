@@ -105,9 +105,24 @@
     <string name="deskripsi_himbauan">Pemerintah terkait biasanya akan memberikan informasi terkini dari negara tersebut terkait keamanan untuk para wisatawan yang sedang berkunjung. Beberapa negara seperti Korea Selatan, China, dan Jepang sepertinya sudah benar-benar tidak aman untuk dikunjungi wisatawan.</string>
     <string name="deskripsi_melindungi">Untuk mencegah penyebaran COVID-19: \n\n1. Cuci tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.\n\n2. Selalu jaga jarak aman dengan orang yang batuk atau bersin. Kenakan masker jika pembatasan fisik tidak dimungkinkan.\n\n3. Jangan sentuh mata, hidung, atau mulut Anda.\n\n4. Saat batuk atau bersin, tutup mulut dan hidung Anda dengan lengan atau tisu.\n\n5. Jangan keluar rumah jika merasa tidak enak badan.\n\n6. Jika demam, batuk, atau kesulitan bernapas, segera cari bantuan medis.</string>
     <string name="tandai">Tandai</string>
-    <string name="siapkah_anda_berwisata_bersama_setrip">Siapkah anda berwisata bersama SETRIP ?</string>
+    <string name="siapkah_anda_berwisata_bersama_setrip">Mari berwisata secara sehat dan aman bersama SETRIP</string>
     <string name="tips_menghindari_covid_19_selama_berwisata_dengan_mudah">Tips menghindari Covid-19 selama berwisata dengan mudah</string>
-    <string name="cari_wisata_favoritmu">Cari Wisata Favoritmu</string>
+    <string name="cari_wisata_favoritmu">Cari dan temukan\nWisata Favoritmu</string>
     <string name="mari_membaca">Mari membaca</string>
+    <string name="yakin_ingin_menghapus">Apakah anda yakin ingin  menghapus postingan?</string>
+    <string name="menghapus_postingan">Konformasi hapus postingan</string>
+    <string name="beli_apd">Ingin berpergian namun belum memiliki APD ? \nKami memiliki solusinya</string>
+    <string name="beli_alat_pelindung_diri_nsekarang">Beli Alat Pelindung Diri\nSekarang</string>
+    <string name="buka_toko">Buka Toko</string>
+    <string name="toko_saya">Toko Saya</string>
+    <string name="tentang_fitur_ini">Tentang Fitur ini</string>
+    <string name="nama_toko">Nama Toko</string>
+    <string name="hubungi">Hubungi</string>
+    <string name="harga">Harga</string>
+    <string name="lokasi_anda">Lokasi anda</string>
+    <string name="nama_barang">Nama barang</string>
+    <string name="nomor_yang_dapat_dihubungi">Nomor yang dapat dihubungi</string>
+    <string name="tambah_apd_baru">Tambah APD baru</string>
+    <string name="not_empty">Kolom tidak boleh kosong</string>
 
 </resources>

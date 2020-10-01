@@ -7,6 +7,18 @@
         android:title="@string/bahasa"
         app:showAsAction="ifRoom" />
 
+
+
+    <item
+        android:id="@+id/option_my_toko"
+        android:title="@string/toko_saya"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/option_about_feature"
+        android:title="@string/tentang_fitur_ini"
+        app:showAsAction="never"/>
+
     <item
         android:id="@+id/option_add"
         android:title="Add Post"
@@ -25,5 +37,11 @@
         app:showAsAction="always"
         android:title="search"
         app:actionViewClass="android.widget.SearchView"/>
+
+    <item
+        android:id="@+id/option_open_toko"
+        android:title="@string/buka_toko"
+        app:showAsAction="ifRoom"
+        />
 
 </menu>

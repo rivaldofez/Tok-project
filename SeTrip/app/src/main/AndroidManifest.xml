@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.DetailInfoWisataActivity"></activity>
+        <activity android:name=".activity.AddTokoApdActivity"></activity>
+        <activity android:name=".activity.TokoApdActivity" />
+        <activity android:name=".activity.DetailInfoWisataActivity" />
         <activity android:name=".activity.InfoWisataActivity" />
         <activity android:name=".activity.InfoCovid19Activity" />
         <activity android:name=".activity.TpisCegahCovidActivity" />

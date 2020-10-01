@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddTokoApdActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/pTitleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:hint="@string/nama_barang"
+            android:singleLine="true"
+            android:background="@drawable/editextstyle"
+            android:autofillHints="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/pLocationEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:hint="@string/lokasi_anda"
+            android:singleLine="true"
+            android:background="@drawable/editextstyle"
+            android:autofillHints="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/pPriceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:hint="@string/harga"
+            android:singleLine="true"
+            android:background="@drawable/editextstyle"
+            android:autofillHints="no"
+            android:inputType="number" />
+
+        <ImageView
+            android:id="@+id/pImageIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:layout_margin="10dp"
+            android:padding="40dp"
+            android:src="@drawable/ic_baseline_add_to_photos_24"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@string/image" />
+
+        <EditText
+            android:id="@+id/pNumberEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:hint="@string/nomor_yang_dapat_dihubungi"
+            android:singleLine="true"
+            android:background="@drawable/editextstyle"
+            android:autofillHints="no"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/pDescEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="@string/masukkan_deskripsi"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/editextstyle"
+            android:autofillHints="no"
+            android:minHeight="120dp"
+            android:gravity="start"
+            android:inputType="textCapSentences" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/pUploadBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unggah_postingan"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_btn"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@android:color/white" />
+
+
+
+    </LinearLayout>
+</ScrollView>
