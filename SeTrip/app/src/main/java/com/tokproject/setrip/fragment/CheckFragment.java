@@ -24,6 +24,7 @@ import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.AddPostActivity;
 import com.tokproject.setrip.activity.CheckInActivity;
 import com.tokproject.setrip.activity.CheckoutActivity;
+import com.tokproject.setrip.activity.HistoryTrip;
 
 
 public class CheckFragment extends Fragment {
@@ -82,10 +83,18 @@ public class CheckFragment extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.menu_check, menu);
 
-        MenuItem item = menu.findItem(R.id.option_add);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
-
+        MenuItem item = menu.findItem(R.id.option_history);
 
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+        if(id == R.id.option_history) {
+            startActivity(new Intent(getActivity(), HistoryTrip.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

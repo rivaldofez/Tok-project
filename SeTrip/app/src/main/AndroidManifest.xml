@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.AddTourGuideActivity"></activity>
+        <activity android:name=".activity.HistoryTrip"></activity>
+        <activity android:name=".activity.AddTourGuideActivity" />
         <activity android:name=".activity.TourGuideActivity" />
         <activity android:name=".activity.AddTokoApdActivity" />
         <activity android:name=".activity.TokoApdActivity" />
