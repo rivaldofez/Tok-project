@@ -5,10 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,14 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.SearchView;
 
 import com.bumptech.glide.Glide;
 import com.tokproject.setrip.R;
-import com.tokproject.setrip.activity.AddPostActivity;
 import com.tokproject.setrip.activity.CheckInActivity;
 import com.tokproject.setrip.activity.CheckoutActivity;
-import com.tokproject.setrip.activity.HistoryTrip;
+import com.tokproject.setrip.activity.MapsHistoryActivity;
 
 
 public class CheckFragment extends Fragment {
@@ -93,7 +89,7 @@ public class CheckFragment extends Fragment {
 
         int id = item.getItemId();
         if(id == R.id.option_history) {
-            startActivity(new Intent(getActivity(), HistoryTrip.class));
+            startActivity(new Intent(getActivity(), MapsHistoryActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
