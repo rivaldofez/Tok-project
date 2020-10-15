@@ -7,12 +7,14 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -24,6 +26,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -90,6 +94,9 @@ public class MapsHistoryActivity extends FragmentActivity implements OnMapReadyC
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ArrayList points = new ArrayList();
+                PolylineOptions polylineOptions = new PolylineOptions();
+
                 for(DataSnapshot ds:snapshot.getChildren()){
                     ModelTrip data = ds.getValue(ModelTrip.class);
 
@@ -103,6 +110,18 @@ public class MapsHistoryActivity extends FragmentActivity implements OnMapReadyC
                     LatLng temp = new LatLng(Double.parseDouble(data.getLatitude()),Double.parseDouble(data.getLongitude()));
                     googleMap.addMarker(new MarkerOptions().position(temp).title(data.getLokasi()).snippet(pinTime +" to "+poutTime).
                             icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+
+                    points.add(temp);
+                }
+                polylineOptions.addAll(points);
+                polylineOptions.width(5);
+                polylineOptions.color(Color.rgb(0,128,0));
+                polylineOptions.geodesic(true);
+
+                if (polylineOptions!=null) {
+                    Polyline polyline = mMap.addPolyline(polylineOptions);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Rute tidak ditemukan", Toast.LENGTH_SHORT).show();
                 }
             }
 
