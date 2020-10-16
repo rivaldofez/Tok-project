@@ -115,18 +115,41 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/nama_pengguna"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@android:color/black" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/nama_pengguna"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:id="@+id/changeName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_weight="0"
+                            android:src="@drawable/ic_outline_edit_24"
+                            android:contentDescription="@string/image" />
+                    </LinearLayout>
+
+
                     <TextView
                         android:id="@+id/usernameTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/username_user" />
+
+
 
                 </LinearLayout>
 
@@ -193,13 +216,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/phone_number"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@android:color/black" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/phone_number"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:id="@+id/changeNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_weight="0"
+                            android:src="@drawable/ic_outline_edit_24"
+                            android:contentDescription="@string/image" />
+
+                    </LinearLayout>
+
+
                     <TextView
                         android:id="@+id/phonenbrTv"
                         android:layout_width="wrap_content"

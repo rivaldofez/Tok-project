@@ -4,7 +4,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.tokproject.setrip.R;
 
 public class AboutApps extends AppCompatActivity {
@@ -19,6 +21,10 @@ public class AboutApps extends AppCompatActivity {
         actionBar.setTitle(R.string.tentang_aplikasi);
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        ImageView logo = findViewById(R.id.logo_app);
+        Glide.with(this).load(R.drawable.full).into(logo);
+
     }
 
     @Override

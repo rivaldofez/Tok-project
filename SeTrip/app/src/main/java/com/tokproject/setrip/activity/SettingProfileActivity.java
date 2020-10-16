@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
+import android.app.AlarmManager;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -56,10 +59,7 @@ public class SettingProfileActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference databaseReference;
 
-    Dialog dialog;
-    Button btnConfirm;
-    Button btndismiss;
-    EditText etChangeName;
+
 
 
     @Override
@@ -101,66 +101,7 @@ public class SettingProfileActivity extends AppCompatActivity {
         }
     }
 
-    public void changeName(View view) {
 
-
-        dialog = new Dialog(this);
-        dialog.setContentView(R.layout.dialog_change_name);
-        btnConfirm = findViewById(R.id.btn_ubah);
-        btndismiss = findViewById(R.id.btn_dismiss_ubah);
-        logoApp = findViewById(R.id.logo_app);
-        etChangeName = findViewById(R.id.et_ubahnama);
-
-        Glide.with(this).load(R.drawable.full).into(logoApp);
-
-        btndismiss.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        btnConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = etChangeName.getText().toString().trim();
-
-                if(name.isEmpty()) {
-                    Toast.makeText(SettingProfileActivity.this, R.string.invalid_name, Toast.LENGTH_SHORT).show();
-                } else {
-                    showLoader(true);
-
-                    HashMap<String, Object> hashMap = new HashMap<>();
-                    hashMap.put("username", name);
-
-
-
-                    assert user != null;
-                    databaseReference.child(user.getUid()).updateChildren(hashMap)
-                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    showLoader(false);
-                                    dialog.dismiss();
-                                    Toast.makeText(SettingProfileActivity.this,  R.string.data_diperbarui, Toast.LENGTH_SHORT).show();
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    showLoader(false);
-                                    Toast.makeText(SettingProfileActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-
-                                }
-                            });
-                }
-            }
-        });
-
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.show();
-
-    }
 
 
     public void aboutApps(View view) {
@@ -199,6 +140,7 @@ public class SettingProfileActivity extends AppCompatActivity {
     }
 
     public void setAlarm(View view) {
-
+        startActivity(new Intent(SettingProfileActivity.this, AlarmManagerActivity.class));
     }
+
 }

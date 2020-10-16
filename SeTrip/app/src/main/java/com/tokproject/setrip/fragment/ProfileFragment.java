@@ -3,11 +3,13 @@ package com.tokproject.setrip.fragment;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -28,6 +30,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -72,6 +76,11 @@ public class ProfileFragment extends Fragment {
     FirebaseUser user;
     FirebaseDatabase database;
     DatabaseReference databaseReference;
+
+    Dialog dialog;
+    Button btndismiss, btnConfNameNumber;
+    EditText etChangeName, etChengeNumber;
+    TextView tvKeteranganubahNamaNomor;
 
     //storage
     private FirebaseAuth firebaseAuth;
@@ -135,6 +144,8 @@ public class ProfileFragment extends Fragment {
         progressBar = view.findViewById(R.id.progressBar);
         detail = view.findViewById(R.id.selamatBekerjaTv);
         avatarIv = view.findViewById(R.id.avatarIv);
+        ImageView changeName = view.findViewById(R.id.changeName);
+        ImageView changeNumber = view.findViewById(R.id.changeNumber);
 
         checkUserStatus();
 
@@ -164,7 +175,92 @@ public class ProfileFragment extends Fragment {
 
         greetings();
 
+        changeName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNamePhoneUpdateDialog("username");
+            }
+        });
+
+        changeNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNamePhoneUpdateDialog("phone_nbr");
+            }
+        });
+
         return view;
+    }
+
+    private void showNamePhoneUpdateDialog(final String key) {
+        dialog = new Dialog(Objects.requireNonNull(getActivity()));
+        dialog.setContentView(R.layout.dialog_ubah_nama_nomor);
+        btnConfNameNumber = dialog.findViewById(R.id.btn_ubah);
+        btndismiss = dialog.findViewById(R.id.btn_dismiss_ubah);
+        etChangeName = dialog.findViewById(R.id.et_ubahnama);
+        etChengeNumber = dialog.findViewById(R.id.et_ubahnomor);
+        tvKeteranganubahNamaNomor = dialog.findViewById(R.id.tv_keterangan_ubahnamanomor);
+
+        String tv = tvKeteranganubahNamaNomor.getText().toString().trim();
+
+        if(key.equals("username")){
+            etChengeNumber.setVisibility(View.GONE);
+            tvKeteranganubahNamaNomor.setText(R.string.nama_lengkap_baru);
+        }else{
+            etChangeName.setVisibility(View.GONE);
+            tvKeteranganubahNamaNomor.setText(R.string.nomor_handphone_baru);
+        }
+
+        btndismiss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnConfNameNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = etChangeName.getText().toString().trim();
+                String number = etChengeNumber.getText().toString().trim();
+
+                if(!name.isEmpty() || !number.isEmpty()) {
+                    showLoader(true);
+                    String value;
+
+                    if(name.isEmpty()){
+                        value = number;
+                    }else {
+                        value = name;
+                    }
+
+                    HashMap<String, Object> result = new HashMap<>();
+                    result.put(key, value);
+
+                    databaseReference.child(user.getUid()).updateChildren(result)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    showLoader(false);
+                                    dialog.dismiss();
+                                    Toast.makeText(getContext(), R.string.data_diperbarui, Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    showLoader(false);
+                                    Toast.makeText(getContext(), ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                } else {
+                    Toast.makeText(getContext(), "Mohon masukkan " + key + " dengan benar", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
 
@@ -179,6 +275,10 @@ public class ProfileFragment extends Fragment {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (getActivity() == null) {
+                    return;
+                }
+
                 for (DataSnapshot ds: snapshot.getChildren()) {
                     //get data
                     String name = ""+ds.child("username").getValue();
