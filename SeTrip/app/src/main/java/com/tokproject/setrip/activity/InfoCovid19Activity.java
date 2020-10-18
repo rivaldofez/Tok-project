@@ -25,6 +25,10 @@ public class InfoCovid19Activity extends AppCompatActivity {
     private TextView inveksi, sembuh, meninggal;
     private ActionBar actionBar;
 
+    int positive;
+    int recover;
+    int death;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +48,7 @@ public class InfoCovid19Activity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
-        //getDataCovid();
+        getDataCovid();
 
         laporCV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +80,12 @@ public class InfoCovid19Activity extends AppCompatActivity {
     }
 
     private void getDataCovid() {
-        AsyncHttpClient client = new AsyncHttpClient();
+
         String url = "https://data.covid19.go.id/public/api/update.json";
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.addHeader("Authorization", "token fe20ff8bf90a61d6dfa9ff53f732ed6190eeb85f");
+        client.addHeader("User-Agent", "request");
         client.get(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -88,13 +96,13 @@ public class InfoCovid19Activity extends AppCompatActivity {
 
                 try {
                     JSONObject responseObject = new JSONObject(result);
-                    int infeksi = responseObject.getJSONObject("update").getJSONObject("total").getInt("jumlah_positif");
-                    int sembuhh = responseObject.getJSONObject("update").getJSONObject("total").getInt("jumlah_sembuh");
-                    int meninggall = responseObject.getJSONObject("update").getJSONObject("total").getInt("jumlah_meninggal");
+                    positive = responseObject.getJSONObject("update").getJSONObject("total").getInt("jumlah_positif");
+                    recover = responseObject.getJSONObject("update").getJSONObject("total").getInt("jumlah_sembuh");
+                    death = responseObject.getJSONObject("update").getJSONObject("total").getInt("jumlah_meninggal");
 
-                    inveksi.setText(String.valueOf(infeksi));
-                    sembuh.setText(String.valueOf(sembuhh));
-                    meninggal.setText(String.valueOf(meninggall));
+                    inveksi.setText(String.valueOf(positive));
+                    sembuh.setText(String.valueOf(recover));
+                    meninggal.setText(String.valueOf(death));
 
                 }catch (Exception e){
                     Toast.makeText(InfoCovid19Activity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
