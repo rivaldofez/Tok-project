@@ -41,6 +41,7 @@
         <activity android:name=".activity.AddPostActivity" />
         <activity android:name=".activity.AboutApps" />
         <activity android:name=".activity.NoteReminderActivity" />
+        <activity android:name=".activity.PanduanFitur" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

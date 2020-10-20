@@ -1,15 +1,14 @@
 package com.tokproject.setrip.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.view.View;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
@@ -90,6 +89,15 @@ public class DashboardActivity extends AppCompatActivity {
         FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
         ft2.replace(R.id.content, fragment2, "");
         ft2.commit();
+
+        //floating action button
+        FloatingActionButton floatButton = findViewById(R.id.fab1);
+        floatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashboardActivity.this, PanduanFitur.class));
+            }
+        });
     }
 
 

@@ -76,4 +76,7 @@ dependencies {
 
     //untuk mengakses API covid19
     implementation 'com.loopj.android:android-async-http:1.4.11'
+
+    //floating button
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
 }
