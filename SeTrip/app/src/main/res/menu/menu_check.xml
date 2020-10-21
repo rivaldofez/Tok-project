@@ -3,9 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/option_history"
-        android:title="Add Post"
+        android:id="@+id/history_list"
+        android:title="History List"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_list_alt_24" />
+
+    <item
+        android:id="@+id/history_map"
+        android:title="History Maps"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_map_24" />
+
 
 </menu>

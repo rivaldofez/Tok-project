@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.CheckInActivity;
 import com.tokproject.setrip.activity.CheckoutActivity;
+import com.tokproject.setrip.activity.HistoryTrip;
 import com.tokproject.setrip.activity.MapsHistoryActivity;
 
 
@@ -78,9 +79,6 @@ public class CheckFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.menu_check, menu);
-
-        MenuItem item = menu.findItem(R.id.option_history);
-
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -88,7 +86,9 @@ public class CheckFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         int id = item.getItemId();
-        if(id == R.id.option_history) {
+        if(id == R.id.history_list) {
+            startActivity(new Intent(getActivity(), HistoryTrip.class));
+        }else if(id == R.id.history_map){
             startActivity(new Intent(getActivity(), MapsHistoryActivity.class));
         }
         return super.onOptionsItemSelected(item);
