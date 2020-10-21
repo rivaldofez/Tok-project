@@ -130,6 +130,8 @@
     <string name="deskripsikan_singkat_diri_anda">Deskripsikan singkat diri anda</string>
     <string name="usia_anda">Usia anda</string>
     <string name="nama_anda">Nama anda</string>
+    <string name="title_activity_maps_history">Map</string>
+    <string name="title_activity_maps">Map</string>
     <string name="ubah_nomor_telepon">Ubah nomor telepon</string>
     <string name="silahkan_masukkan">Silahkan masukkan</string>
     <string name="nama_lengkap_baru">nama lengkap baru</string>

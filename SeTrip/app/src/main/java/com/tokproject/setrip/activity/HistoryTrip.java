@@ -7,6 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.SearchView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -45,7 +50,12 @@ public class HistoryTrip extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         modelTrip = new ArrayList<>();
+        fetchHistory();
 
+    }
+
+    private void fetchHistory(){
+        modelTrip.clear();
         databaseReference = FirebaseDatabase.getInstance().getReference("Trip").child(uid);
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -64,7 +74,36 @@ public class HistoryTrip extends AppCompatActivity {
 
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search_history,menu);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                if(!TextUtils.isEmpty(s)) {
+                    adapterTrip.getFilter().filter(s);
+                } else {
+                    fetchHistory();
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                if(!TextUtils.isEmpty(s)) {
+                    adapterTrip.getFilter().filter(s);
+                } else {
+                    fetchHistory();
+                }
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 }
