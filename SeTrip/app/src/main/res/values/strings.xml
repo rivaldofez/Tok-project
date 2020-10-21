@@ -132,5 +132,14 @@
     <string name="nama_anda">Nama anda</string>
     <string name="title_activity_maps_history">Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="ubah_nomor_telepon">Ubah nomor telepon</string>
+    <string name="silahkan_masukkan">Silahkan masukkan</string>
+    <string name="nama_lengkap_baru">nama lengkap baru</string>
+    <string name="nomor_handphone_baru">nomor handphone baru</string>
+    <string name="alarm_satu_waktu">Alarm satu waktu</string>
+    <string name="set_tanggal">Set tanggal</string>
+    <string name="masukkan_pesan_untuk_pengingat_alarm">Masukkan pesan untuk pengingat alarm</string>
+    <string name="set_alarm">Set alarm</string>
+    <string name="setel_alarm_berulang">Setel alarm berulang</string>
 
 </resources>

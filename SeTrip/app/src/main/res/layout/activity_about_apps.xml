@@ -37,14 +37,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="Hottalk is a Social Media Apps which can see other people activity, discuss about issue, relating with each other, or you just want to search your friend and make chat ?. this is the right application you can use. " />
+                android:text="SETRIP adalah aplikasi yang memberikan rekomendasi pariwisata dengan menerapkan kepatuhan terhadap protokol kesehatan pada objek wisata dengan tujuan untuk meningkatkan kesadaran tentang kesehatan kepada pengguna.\n\nSelain itu SETRIP menyediakan fitur Toko APD, dimana fitur ini memudahkan pengguna untuk membeli APD ketika ingin berpergian, juga fitur ini membuka lapangan pekerjaan bagi seluruh elemen masyarakat yang ingin berjualan APD secara online sehingga berpeluang untuk meningkatkan kesejahteraan masyarakat.\n\nSETRIP menyediakan fitur tour guide yang berguna untuk memandu wisatawan dan memberikan informasi menarik selama berwisata sehingga wisatawan mendapatkan informasi mengenai pariwisata tersebut, fitur tour guide juga membuka lapangan pekerjaan bagi masyarakat umum." />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Secure Your Own Trip - STRIP"
+                android:text="Secure yourself during Trip - STRIP"
                 android:layout_gravity="center"
                 android:layout_marginBottom="35dp"
                 android:textSize="20sp"
