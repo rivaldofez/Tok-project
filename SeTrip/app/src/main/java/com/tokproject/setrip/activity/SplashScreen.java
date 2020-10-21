@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
+import com.tokproject.setrip.DetectorActivity;
 import com.tokproject.setrip.R;
 
 import java.util.Locale;
@@ -37,7 +38,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 //setelah waktu splashscreen habis, maka langsung berpindah ke Halaman Login
                 progressBar.setVisibility(View.GONE);
-                startActivity(new Intent(SplashScreen.this, Login.class));
+                startActivity(new Intent(SplashScreen.this, DetectorActivity.class));
                 finish();
             }
         }, splashscreen_time);
