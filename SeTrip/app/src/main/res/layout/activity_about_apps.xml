@@ -37,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
+                android:justificationMode="inter_word"
                 android:text="SETRIP adalah aplikasi yang memberikan rekomendasi pariwisata dengan menerapkan kepatuhan terhadap protokol kesehatan pada objek wisata dengan tujuan untuk meningkatkan kesadaran tentang kesehatan kepada pengguna.\n\nSelain itu SETRIP menyediakan fitur Toko APD, dimana fitur ini memudahkan pengguna untuk membeli APD ketika ingin berpergian, juga fitur ini membuka lapangan pekerjaan bagi seluruh elemen masyarakat yang ingin berjualan APD secara online sehingga berpeluang untuk meningkatkan kesejahteraan masyarakat.\n\nSETRIP menyediakan fitur tour guide yang berguna untuk memandu wisatawan dan memberikan informasi menarik selama berwisata sehingga wisatawan mendapatkan informasi mengenai pariwisata tersebut, fitur tour guide juga membuka lapangan pekerjaan bagi masyarakat umum." />
 
 
