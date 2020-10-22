@@ -52,6 +52,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.tokproject.setrip.DetectorActivity;
 import com.tokproject.setrip.R;
 import com.tokproject.setrip.activity.Login;
 import com.tokproject.setrip.activity.MapsLocationActivity;
@@ -110,6 +111,7 @@ public class ProfileFragment extends Fragment {
     private TextView phoneNumber;
     private TextView detail;
     private TextView noteTv;
+    private TextView smartCamera;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -141,6 +143,7 @@ public class ProfileFragment extends Fragment {
         emailTv = view.findViewById(R.id.emailTv);
         phoneNumber = view.findViewById(R.id.phonenbrTv);
         noteTv = view.findViewById(R.id.noteTv);
+        smartCamera = view.findViewById(R.id.viewCamera);
         progressBar = view.findViewById(R.id.progressBar);
         detail = view.findViewById(R.id.selamatBekerjaTv);
         avatarIv = view.findViewById(R.id.avatarIv);
@@ -186,6 +189,13 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 showNamePhoneUpdateDialog("phone_nbr");
+            }
+        });
+
+        smartCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), DetectorActivity.class));
             }
         });
 
