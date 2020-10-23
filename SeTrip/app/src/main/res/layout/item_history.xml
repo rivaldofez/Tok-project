@@ -22,7 +22,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_list_alt_24" />
+        app:srcCompat="@drawable/history" />
 
 
     <RelativeLayout
@@ -52,7 +52,7 @@
             android:layout_below="@+id/txtName"
             android:layout_marginTop="5dp"
             android:text="Check in : 10 September 2020"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/black"
             android:textSize="10sp" />
 
         <TextView
@@ -63,7 +63,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
             android:text="Check out : 10 September 2020"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/black"
             android:textSize="10sp" />
     </RelativeLayout>
 
