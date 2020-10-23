@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Cream">#FADCAC</color>
-    <color name="colorPrimary">#158467</color>
-    <color name="colorAccent">#197163</color>
-    <color name="colorPrimaryDark">#065446</color>
+    <color name="colorPrimary">#065446</color>
+    <color name="colorAccent">#F58634</color>
+    <color name="colorPrimaryDark">#158467</color>
+    <color name="darkBlue">#076173</color>
+    <color name="mediumBlue">#06C5CC</color>
+
+    <color name="tfe_color_primary">#ffa800</color>
+    <color name="tfe_color_primary_dark">#ff6f00</color>
+    <color name="tfe_color_accent">#425066</color>
+    <color name="tfe_semi_transparent">#66000000</color>
 
 </resources>

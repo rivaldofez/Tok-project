@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ec903b2-634a-4a4f-9927-29fd9bb19be0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../java/com/tokproject/setrip/activity/CheckInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/tokproject/setrip/activity/CheckInActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/tokproject/setrip/fragment/CheckFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/tokproject/setrip/fragment/CheckFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_check_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_check_in.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectId" id="1h0TyZ3oGXzE9FxsWRTXUl86sKd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../jaramba-mobile" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ec903b2-634a-4a4f-9927-29fd9bb19be0" name="Default Changelist" comment="" />
+      <created>1599147264290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599147264290</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="482" y="194" key="FileChooserDialogImpl" timestamp="1599147303558">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="482" y="194" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1920.1050@0.0.1366.738" timestamp="1599147303558" />
+  </component>
+</project>
