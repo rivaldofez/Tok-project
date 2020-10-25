@@ -17,7 +17,7 @@
         <RelativeLayout
             android:id="@+id/infoWisata"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:layout_margin="15dp"
             android:orientation="vertical"
             android:background="@drawable/icon_bg5">
@@ -48,13 +48,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/judul"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="10dp"
                 android:padding="10dp"
                 android:layout_marginStart="20dp"
                 android:layout_toEndOf="@+id/info"
                 android:text="@string/cari_wisata_favoritmu"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
 
@@ -100,7 +100,7 @@
                 android:layout_toEndOf="@+id/covid19"
                 android:text="@string/mari_membaca"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
 
@@ -133,7 +133,7 @@
                 android:layout_marginTop="27dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:textSize="17sp"
+                android:textSize="16sp"
                 android:layout_marginStart="10dp" />
 
             <TextView

@@ -2,6 +2,9 @@ package com.tokproject.setrip.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +14,14 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.tokproject.setrip.R;
+import com.tokproject.setrip.activity.Login;
+import com.tokproject.setrip.activity.SettingProfileActivity;
 import com.tokproject.setrip.model.ModelTokoApd;
 
 import org.w3c.dom.Text;
@@ -71,6 +77,37 @@ public class AdapterTokoApd extends RecyclerView.Adapter<AdapterTokoApd.MyHolder
         holder.callTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+            }
+        });
+
+        holder.callTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle(R.string.konfirmasi_hubungi_penjual);
+                builder.setMessage("Ingin menghubungi penjual " + nama_toko);
+                builder.setCancelable(false);
+
+                builder.setPositiveButton(R.string.ya, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String phoneNbr = String.valueOf(nomor_hp);
+                        Intent k = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNbr));
+                        context.startActivity(k);
+                    }
+                });
+
+                builder.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
 
             }
         });

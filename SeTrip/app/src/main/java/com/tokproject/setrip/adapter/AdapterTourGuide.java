@@ -2,6 +2,9 @@ package com.tokproject.setrip.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -71,8 +75,33 @@ public class AdapterTourGuide extends RecyclerView.Adapter<AdapterTourGuide.MyHo
             @Override
             public void onClick(View view) {
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle(R.string.konfirmasi_hubungi_tour_guide);
+                builder.setMessage("Ingin menghubungi tour guide " + nama_tour_guide);
+                builder.setCancelable(false);
+
+                builder.setPositiveButton(R.string.ya, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String phoneNbr = String.valueOf(nomor_hp);
+                        Intent k = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNbr));
+                        context.startActivity(k);
+                    }
+                });
+
+                builder.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
             }
         });
+
 
         //set post image
         //if there image or not
@@ -110,7 +139,7 @@ public class AdapterTourGuide extends RecyclerView.Adapter<AdapterTourGuide.MyHo
             locationTv = itemView.findViewById(R.id.alamatTv);
             numberTv = itemView.findViewById(R.id.nomor_telepon);
             ageTv = itemView.findViewById(R.id.usiaTv);
-            callTv = itemView.findViewById(R.id.hubungi_toko);
+            callTv = itemView.findViewById(R.id.hubungi_tour_guide);
 
         }
     }

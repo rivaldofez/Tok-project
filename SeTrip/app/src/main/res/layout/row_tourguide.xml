@@ -105,7 +105,7 @@
                 android:text="Nomor telepon" />
 
             <Button
-                android:id="@+id/hubungi_toko"
+                android:id="@+id/hubungi_tour_guide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hubungi"

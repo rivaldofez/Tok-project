@@ -143,5 +143,9 @@
     <string name="setel_alarm_berulang">Setel alarm berulang</string>
     <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">TFL Detect</string>
     <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="alarm_manageer">Pengatur Alarm</string>
+    <string name="konfirmasi_hubungi_penjual">Konfirmasi hubungi penjual APD</string>
+    <string name="konfirmasi_hubungi_tour_guide">Konfirmasi hubungi tour guide</string>
+    <string name="apakah_anda_yakin3">Apakah anda ingin menghubungi</string>
 
 </resources>

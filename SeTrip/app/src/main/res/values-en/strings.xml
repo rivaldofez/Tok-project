@@ -135,5 +135,9 @@
     <string name="masukkan_pesan_untuk_pengingat_alarm">Masukkan pesan untuk pengingat alarm</string>
     <string name="set_alarm">Set alarm</string>
     <string name="setel_alarm_berulang">Setel alarm berulang</string>
+    <string name="alarm_manageer">Pengatur Alarm</string>
+    <string name="konfirmasi_hubungi_penjual">Konfirmasi hubungi penjual APD</string>
+    <string name="konfirmasi_hubungi_tour_guide">Konfirmasi hubungi tour guide</string>
+    <string name="apakah_anda_yakin3">Apakah anda ingin menghubungi</string>
 
 </resources>

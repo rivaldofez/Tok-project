@@ -39,7 +39,7 @@ public class AlarmManagerActivity extends AppCompatActivity  implements View.OnC
 
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-        actionBar.setTitle(R.string.tentang_aplikasi);
+        actionBar.setTitle(R.string.alarm_manageer);
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
