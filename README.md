@@ -51,7 +51,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-CoFit-19 is an apps for you to secure your travelling experience during pandemic Covid-19 using checkin-checkout feature. This apps also have additional feature to enchance yout experience such as social media, AI Camera, shop and nearby location
+SETRIP is an apps for you to secure your travelling experience during pandemic Covid-19 using checkin-checkout feature. This apps also have additional feature to enchance yout experience such as social media, AI Camera, shop and nearby location
 
 
 
